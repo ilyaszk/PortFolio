@@ -1,11 +1,11 @@
 <script setup></script>
 
 <template>
-  <div class="h-screen bg-primary">
-    <h2 class="text-4xl text-white font-bold text-center pt-20">
+  <div class="min-h-screen pb-12 snap-item bg-primary">
+    <h2 class="text-4xl text-white font-bold text-center pt-8">
       My competences as a Full-Stack developer
     </h2>
-    <div class="flex justify-center mt-10">
+    <div class="flex justify-center mt-2">
       <div
         class="relative mt-6 flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
       >

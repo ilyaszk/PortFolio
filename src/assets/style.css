@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #939597;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cf5c78;
+}
+.snap-container {
+  height: 100vh; /* Set a fixed height for the container */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scroll-snap-type: y mandatory; /* Enable snap scrolling on the y-axis */
+}
+
+.snap-item {
+  scroll-snap-align: start; /* Snap to the start of each item */
+}

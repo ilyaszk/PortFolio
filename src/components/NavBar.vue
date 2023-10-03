@@ -37,7 +37,7 @@ export default {
 </script>
 
 <template>
-  <nav class="flex justify-between px-20 py-9 items-center bg-white">
+  <nav class="flex justify-between px-20 py-9 items-center snap-start bg-white">
     <div class="flex">
       <svg
         id="Layer_1"
@@ -107,14 +107,7 @@ export default {
             >Resume</a
           >
         </li>
-        <li>
-          <a
-            class="cursor-pointer text-xl text-primary hover:text-secondary hover:font-bold transition duration-500 ease-in-out"
-            href=""
-          >
-            Contact
-          </a>
-        </li>
+
         <li>
           <a
             class="cursor-pointer"
