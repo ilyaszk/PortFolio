@@ -1,165 +1,303 @@
-<script setup></script>
-
+<script setup>
+import { onMounted } from "vue";
+import { initFlowbite } from "flowbite";
+</script>
 <template>
-  <div class="min-h-screen pb-12 snap-item bg-primary">
-    <h2 class="text-4xl text-white font-bold text-center pt-8">
-      My competences as a Full-Stack developer
-    </h2>
-    <div class="flex justify-center mt-2">
+  <div class="min-h-screen snap-item bg-tertiary">
+    <div class="flex justify-center min-h-screen py-10 items-center">
       <div
-        class="relative mt-6 flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+        id="default-carousel"
+        class="relative w-[90vw] h-[90vh] px-20 pb-14"
+        data-carousel="{{ state }}"
       >
-        <div class="p-6">
-          <svg
-            class="fill-current text-secondary mb-4"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="56"
-            height="56"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill="text-secondary"
-              d="M5.6 11.6l-1.2-1.2c-0.8-0.2-2-0.1-2.7 1-0.8 1.1-0.3 2.8-1.7 4.6 0 0 3.5 0 4.8-1.3 1.2-1.2 1.2-2.2 1-3l-0.2-0.1z"
-            ></path>
-            <path
-              fill="secondary"
-              d="M5.8 8.1c-0.2 0.3-0.5 0.7-0.7 1 0 0.2-0.1 0.3-0.2 0.4l1.5 1.5c0.1-0.1 0.3-0.2 0.4-0.3 0.3-0.2 0.7-0.4 1-0.7 0.4 0 0.6-0.2 0.8-0.4l-2.2-2.2c-0.2 0.2-0.4 0.4-0.6 0.7z"
-            ></path>
-            <path
-              fill="secondary"
-              d="M15.8 0.2c-0.3-0.3-0.7-0.3-1-0.1 0 0-3 2.5-5.9 5.1-0.4 0.4-0.7 0.7-1.1 1-0.2 0.2-0.4 0.4-0.6 0.5l2.1 2.1c0.2-0.2 0.4-0.4 0.5-0.7 0.3-0.4 0.6-0.7 0.9-1.1 2.5-3 5.1-5.9 5.1-5.9 0.3-0.2 0.3-0.6 0-0.9z"
-            ></path>
-          </svg>
-
-          <h5
-            class="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-secondary antialiased"
-          >
-            Front-End
-          </h5>
-          <p class="mb-4 text-lg text-gray-500">
-            I have a passion for building web applications from the ground up
-            and transforming creative concepts into interactive experiences in
-            the browser.
-          </p>
-          <p class="text-lg font-semibold text-secondary">Languages I speak:</p>
-          <ul class="mb-4 text-lg text-gray-500 ml-4 list-disc">
-            <li>HTML, CSS, JS, VUEJS, REACTJS, ANGULAR, ANGULARJS, FLUTTER</li>
-          </ul>
-          <p class="text-lg font-semibold text-secondary">Dev Tools:</p>
-          <ul class="text-lg text-gray-500 ml-4 list-disc">
-            <li>VS Code</li>
-            <li>IntelliJ</li>
-            <li>Bootstrap</li>
-            <li>TailWind</li>
-            <li>Github</li>
-            <li>Copilot</li>
-          </ul>
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden rounded-lg md:h-[80vh]">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="flex bg-white h-full items-center">
+              <div class="w-2/5">
+                <img src="../assets/FrontEnd.jpg" alt="" />
+              </div>
+              <div class="w-3/5 px-10">
+                <h1 class="text-4xl font-bold my-2 text-secondary">
+                  Front-end
+                </h1>
+                <p class="text-lg text-gray-500">
+                  I have a passion for building web applications from the ground
+                  up and transforming creative concepts into interactive
+                  experiences in the browser.
+                </p>
+                <p class="text-lg font-semibold text-secondary my-2">
+                  Languages I speak:
+                </p>
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#HTML</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#CSS</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#JS</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#VUEJS</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#REACTJS</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#ANGULAR</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#ANGULARJS</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#FLUTTER</span
+                >
+                <p class="text-lg font-semibold text-secondary my-2">
+                  Dev Tools:
+                </p>
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#VS Code</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#IntelliJ</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#Bootstrap</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#TailWind</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#Github</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#Copilot</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="flex bg-white h-full items-center">
+              <div class="w-2/5">
+                <img src="../assets/BackEnd.jpg" alt="" />
+              </div>
+              <div class="w-3/5 px-10">
+                <h1 class="text-4xl font-bold my-2 text-secondary">Back-end</h1>
+                <p class="text-lg text-gray-500">
+                  I excel in developing server-side solutions and backend
+                  systems, turning complex ideas into robust and efficient
+                  functionality behind the scenes.
+                </p>
+                <p class="text-lg font-semibold text-secondary my-2">
+                  Languages I speak:
+                </p>
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#JAVA/J2EE</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#PHP</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#SYMFONY</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#PostgreSQL</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#MySQL</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#HIBERNATE</span
+                >
+                <p class="text-lg font-semibold text-secondary my-2">
+                  Dev Tools:
+                </p>
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#VS Code</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#IntelliJ</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#Linux</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#Postman</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#Github</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#Copilot</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="flex bg-white h-full items-center">
+              <div class="w-2/5">
+                <img src="../assets/softSkills.jpg" alt="" />
+              </div>
+              <div class="w-3/5 px-10">
+                <h1 class="text-4xl font-bold my-2 text-secondary">
+                  Soft-skills
+                </h1>
+                <p class="text-lg text-gray-500">
+                  I possess valuable soft skills that enhance my effectiveness
+                  as a developer and collaborator. These include strong
+                  communication and teamwork.
+                </p>
+                <p class="text-lg font-semibold text-secondary my-2">
+                  Languages I speak:
+                </p>
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#FRENCH</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#ENGLISH</span
+                >
+                <p class="text-lg font-semibold text-secondary my-2">
+                  Dev Tools:
+                </p>
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#Communication</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#Teamwork</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#Problem-solving</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#Adaptability</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-secondary mr-2 mb-2"
+                  >#Self-control</span
+                >
+                <span
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  >#Positivity</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div
-        class="relative mt-6 flex w-96 flex-col rounded-xl mx-6 bg-white bg-clip-border text-gray-700 shadow-md"
-      >
-        <div class="p-6">
-          <svg
-            class="fill-current text-secondary mb-4"
-            id="_x30_1"
-            version="1.1"
-            width="56"
-            height="56"
-            viewBox="0 0 512 512"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <g>
-              <circle cx="256" cy="254.062" r="24.375" />
-              <circle cx="346.188" cy="254.062" r="24.375" />
-              <circle cx="165.812" cy="254.062" r="24.375" />
-              <path
-                d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M412,351.562   c0,20.193-16.37,36.562-36.562,36.562H303.96c-4.075,0-7.88,2.036-10.141,5.427l-18.872,28.307   C270.724,428.195,263.614,432,256,432s-14.724-3.805-18.948-10.141l-18.872-28.307c-2.26-3.391-6.066-5.427-10.141-5.427h-71.477   c-20.193,0-36.562-16.37-36.562-36.562v-195C100,136.37,116.37,120,136.562,120h238.875C395.63,120,412,136.37,412,156.562V351.562   z"
-              />
-            </g>
-          </svg>
-
-          <h5
-            class="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-secondary antialiased"
-          >
-            Soft Skills
-          </h5>
-          <p class="mb-4 text-lg text-gray-500">
-            I possess valuable soft skills that enhance my effectiveness as a
-            developer and collaborator. These include strong communication and
-            teamwork.
-          </p>
-          <p class="text-lg font-semibold text-secondary">Languages I speak:</p>
-          <ul class="mb-4 text-lg text-gray-500 ml-4 list-disc">
-            <li>
-              French, English <br />
-              <p class="opacity-0">.</p>
-            </li>
-          </ul>
-          <p class="text-lg font-semibold text-secondary">Dev Tools:</p>
-          <ul class="text-lg text-gray-500 ml-4 list-disc">
-            <li>Communication</li>
-            <li>Teamwork</li>
-            <li>Problem-solving</li>
-            <li>Adaptability</li>
-            <li>Self-control</li>
-            <li>Positivity</li>
-          </ul>
+        <!-- Slider indicators -->
+        <div
+          class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+        >
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"
+          ></button>
         </div>
-      </div>
-
-      <div
-        class="relative mt-6 flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
-      >
-        <div class="p-6">
-          <svg
-            class="fill-current text-secondary mb-4"
-            width="56"
-            height="56"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
+        <!-- Slider controls -->
+        <button
+          type="button"
+          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary dark:bg-gray-800/30 group-hover:bg-secondary dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
           >
-            <g font-family="Sans" font-weight="400">
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
               <path
-                d="M3.549.09a3.5 3.5 0 00-1.143.216l1.885 1.88c.387.386.387 1 0 1.387l-.711.708a.98.98 0 01-1.39 0L.303 2.401a3.473 3.473 0 00-.216 1.14 3.456 3.456 0 003.46 3.452 3.5 3.5 0 001.144-.216l1.174 1.171a2.472 2.465 0 01.062 0l2.07-2.064-1.205-1.202a3.46 3.46 0 00.217-1.14A3.456 3.456 0 003.549.09zm6.55 7.89l-2.07 2.064a2.472 2.465 0 01.031.092l1.144 1.14a3.474 3.474 0 00-.217 1.14 3.456 3.456 0 003.461 3.452c.434 0 .854-.102 1.236-.247l-2.008-2.003a1.01 1.01 0 010-1.417l.68-.678a1.03 1.03 0 01.71-.308c.253 0 .517.115.71.308l1.947 1.941c.105-.33.186-.683.186-1.047a3.456 3.456 0 00-3.46-3.452 3.5 3.5 0 00-1.144.216L10.1 7.979z"
-                overflow="visible"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
               />
-              <path
-                d="M13.858 0l-1.542 1.438c-.452.42-.53 1.148-.267 1.706L6.161 9.14a1.492 1.488 0 00-.031 0 1.492 1.488 0 00-.84-.148 1.492 1.488 0 00-.867.44L.477 13.43a1.494 1.49 0 102.13 2.09l3.946-3.997a1.492 1.488 0 00.297-1.738l5.888-5.965c.558.249 1.273.147 1.707-.292l1.417-1.56L13.858 0z"
-                overflow="visible"
-              />
-            </g>
-          </svg>
-
-          <h5
-            class="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-secondary antialiased"
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary dark:bg-gray-800/30 group-hover:bg-secondary dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
           >
-            Back-End
-          </h5>
-          <p class="mb-4 text-lg text-gray-500">
-            I excel in developing server-side solutions and backend systems,
-            turning complex ideas into robust and efficient functionality behind
-            the scenes.
-          </p>
-          <p class="text-lg font-semibold text-secondary">Languages I speak:</p>
-          <ul class="mb-4 text-lg text-gray-500 ml-4 list-disc">
-            <li>JAVA/J2EE, PHP, SYMFONY, PostgreSQL, MySQL, HIBERNATE</li>
-          </ul>
-          <p class="text-lg font-semibold text-secondary">Dev Tools:</p>
-          <ul class="text-lg text-gray-500 ml-4 list-disc">
-            <li>IntelliJ</li>
-            <li>VS Code</li>
-            <li>Linux</li>
-            <li>Postman</li>
-            <li>Github</li>
-            <li>Copilot</li>
-          </ul>
-        </div>
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
       </div>
     </div>
   </div>

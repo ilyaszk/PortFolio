@@ -37,7 +37,10 @@ export default {
 </script>
 
 <template>
-  <nav class="flex justify-between px-20 py-9 items-center snap-start bg-white">
+  <nav
+    id="navBar"
+    class="flex justify-between px-20 py-9 items-center snap-start bg-white"
+  >
     <div class="flex">
       <svg
         id="Layer_1"

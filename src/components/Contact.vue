@@ -1,15 +1,20 @@
 <script setup></script>
 <template>
-  <section class="min-h-screen snap-item bg-primary pb-7">
+  <section
+    id="contact"
+    class="min-h-screen snap-item bg-tertiary pb-7 relative"
+  >
     <div class="w-1/2 mx-auto">
-      <h2 class="text-4xl text-white font-bold text-center pt-8">Contact Me</h2>
-      <p class="text-lg text-white font-bold text-center mt-4">
+      <h2 class="text-4xl text-primary font-bold text-center pt-8">
+        Contact Me
+      </h2>
+      <p class="text-lg text-primary font-bold text-center mt-4">
         If you have any questions or something to discuss, please drop me a
         line. I will get back to you as soon as possible. Thank you!
       </p>
       <form action="#" class="space-y-8 my-4">
         <div>
-          <label for="email" class="block mb-2 text-md font-bold text-white">
+          <label for="email" class="block mb-2 text-md font-bold text-primary">
             Your email
           </label>
           <input
@@ -21,7 +26,10 @@
           />
         </div>
         <div>
-          <label for="subject" class="block mb-2 text-md font-bold text-white">
+          <label
+            for="subject"
+            class="block mb-2 text-md font-bold text-primary"
+          >
             Subject
           </label>
           <input
@@ -33,7 +41,10 @@
           />
         </div>
         <div class="sm:col-span-2">
-          <label for="message" class="block mb-2 text-md font-bold text-white">
+          <label
+            for="message"
+            class="block mb-2 text-md font-bold text-primary"
+          >
             Your message
           </label>
           <textarea
@@ -51,5 +62,6 @@
         </button>
       </form>
     </div>
+   
   </section>
 </template>

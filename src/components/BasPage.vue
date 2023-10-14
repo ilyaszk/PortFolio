@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <footer
+  <footer  id="basPage"
     class="footer footer-center p-8 h-[30vh] snap-item text-primary-content"
   >
     <div class="max-w-2xl mx-auto text-white">

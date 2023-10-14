@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -17,6 +21,7 @@
   height: 100vh; /* Set a fixed height for the container */
   overflow-y: scroll; /* Enable vertical scrolling */
   scroll-snap-type: y mandatory; /* Enable snap scrolling on the y-axis */
+  scroll-behavior: smooth;
 }
 
 .snap-item {

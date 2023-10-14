@@ -8,30 +8,36 @@ import Contact from "./components/Contact.vue";
 import LoadingScreen from "./components/LoadingScreen.vue";
 
 const isLoadingScreen = ref(true);
-const isLoadingHome = ref(false);
+const isLoadingHome = ref(true);
 onMounted(() => {
-  setTimeout(() => {
-    isLoadingScreen.value = false; // Update the ref value
-  }, 1800); // Adjust the time as needed
-
-  setTimeout(() => {
-    isLoadingHome.value = true; // Update the ref value
-  }, 3000);
+  // setTimeout(() => {
+  //   isLoadingScreen.value = false; // Update the ref value
+  // }, 1800); // Adjust the time as needed
+  // setTimeout(() => {
+  //   isLoadingHome.value = true; // Update the ref value
+  // }, 3000);
 });
+
+const showEncre = () => {
+  document.getElementById("encre").setAttribute("style", "display: none;");
+};
 </script>
 
 <template>
-  <Transition name="fade">
+  <!-- <Transition name="fade">
     <LoadingScreen v-if="isLoadingScreen"></LoadingScreen>
-  </Transition>
+  </Transition> -->
   <Transition name="fade">
-    <div v-if="isLoadingHome" class="snap-container">
-      <NavBar></NavBar>
+    <div v-if="isLoadingHome" class="snap-container pricipal">
+      <NavBar @onfocus="showEncre"></NavBar>
       <Presentation></Presentation>
       <Competences></Competences>
       <div class="h-screen snap-item">projet</div>
       <Contact></Contact>
       <BasPage></BasPage>
+      <nav class="gotoTop">
+        <a href="#navBar">&#9650;</a>
+      </nav>
     </div>
   </Transition>
 </template>
@@ -43,5 +49,29 @@ onMounted(() => {
 }
 .fade-enter-from, .fade-leave-to /* .fade-leave-active in 2.1.8 */ {
   opacity: 0;
+}
+
+.pricipal {
+  position: relative;
+}
+
+.gotoTop {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  font-size: 3rem;
+  z-index: 100;
+}
+
+.gotoTop a {
+  text-decoration: none;
+  color: #939597;
+}
+
+.gotoTop a:hover {
+  color: #cf5c78;
+  transition: all 0.3s ease-in-out;
 }
 </style>
