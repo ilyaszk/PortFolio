@@ -1,6 +1,11 @@
 <script setup>
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { initFlowbite } from "flowbite";
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+  initFlowbite();
+});
 </script>
 <template>
   <div class="min-h-screen snap-item bg-tertiary">
@@ -22,7 +27,7 @@ import { initFlowbite } from "flowbite";
                 <h1 class="text-4xl font-bold my-2 text-secondary">
                   Front-end
                 </h1>
-                <p class="text-lg text-gray-500">
+                <p class="text-lg text-primary">
                   I have a passion for building web applications from the ground
                   up and transforming creative concepts into interactive
                   experiences in the browser.
@@ -100,7 +105,7 @@ import { initFlowbite } from "flowbite";
               </div>
               <div class="w-3/5 px-10">
                 <h1 class="text-4xl font-bold my-2 text-secondary">Back-end</h1>
-                <p class="text-lg text-gray-500">
+                <p class="text-lg text-primary">
                   I excel in developing server-side solutions and backend
                   systems, turning complex ideas into robust and efficient
                   functionality behind the scenes.
@@ -172,7 +177,7 @@ import { initFlowbite } from "flowbite";
                 <h1 class="text-4xl font-bold my-2 text-secondary">
                   Soft-skills
                 </h1>
-                <p class="text-lg text-gray-500">
+                <p class="text-lg text-primary">
                   I possess valuable soft skills that enhance my effectiveness
                   as a developer and collaborator. These include strong
                   communication and teamwork.

@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  front-portfolio:
+    build:
+      context: ./FrontPortFolio
+      dockerfile: Dockerfile
+    networks:
+      - mynetwork
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./FrontPortFolio:/app
+      - /app/node_modules
+
+networks:
+  mynetwork:

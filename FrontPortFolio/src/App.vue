@@ -5,17 +5,19 @@ import Presentation from "./components/Presentation.vue";
 import Competences from "./components/Competences.vue";
 import BasPage from "./components/BasPage.vue";
 import Contact from "./components/Contact.vue";
+import BonRencontre from "./components/BonRencontre.vue";
 import LoadingScreen from "./components/LoadingScreen.vue";
+import Experiences from "./components/Experiences.vue";
 
 const isLoadingScreen = ref(true);
-const isLoadingHome = ref(true);
+const isLoadingHome = ref(false);
 onMounted(() => {
-  // setTimeout(() => {
-  //   isLoadingScreen.value = false; // Update the ref value
-  // }, 1800); // Adjust the time as needed
-  // setTimeout(() => {
-  //   isLoadingHome.value = true; // Update the ref value
-  // }, 3000);
+  setTimeout(() => {
+    isLoadingScreen.value = false; // Update the ref value
+  }, 1800); // Adjust the time as needed
+  setTimeout(() => {
+    isLoadingHome.value = true; // Update the ref value
+  }, 3300);
 });
 
 const showEncre = () => {
@@ -24,15 +26,16 @@ const showEncre = () => {
 </script>
 
 <template>
-  <!-- <Transition name="fade">
+  <Transition name="fade">
     <LoadingScreen v-if="isLoadingScreen"></LoadingScreen>
-  </Transition> -->
+  </Transition>
   <Transition name="fade">
     <div v-if="isLoadingHome" class="snap-container pricipal">
       <NavBar @onfocus="showEncre"></NavBar>
       <Presentation></Presentation>
       <Competences></Competences>
-      <div class="h-screen snap-item">projet</div>
+      <Experiences></Experiences>
+      <BonRencontre></BonRencontre>
       <Contact></Contact>
       <BasPage></BasPage>
       <nav class="gotoTop">
@@ -64,7 +67,10 @@ const showEncre = () => {
   font-size: 3rem;
   z-index: 100;
 }
-
+.gotoTop:hover {
+  scale: 1.2;
+  transition: all 0.5s ease-in-out;
+}
 .gotoTop a {
   text-decoration: none;
   color: #939597;
@@ -72,6 +78,6 @@ const showEncre = () => {
 
 .gotoTop a:hover {
   color: #cf5c78;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 </style>

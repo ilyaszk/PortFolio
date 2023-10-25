@@ -1,4 +1,6 @@
 <script setup>
+import { onMounted } from "vue";
+
 const words = [
   "Hello, I'm Ilyas",
   "I'm a",
@@ -31,10 +33,14 @@ const type = () => {
     }
   }
   if (i !== words.length) {
-    setTimeout(type, 30);
+    setTimeout(type, 40);
   }
 };
-type();
+onMounted(() => {
+  setTimeout(() => {
+    type();
+  }, 500);
+});
 </script>
 <template>
   <div class="flex justify-center h-screen snap-item px-20 pb-9">
