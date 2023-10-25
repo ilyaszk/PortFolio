@@ -1,14 +1,16 @@
 # PortFolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Hello, this is my portfolio, I made it with Vue.js, Vite, TailwindCSS and Docker.
+it describes my skills, my projects and my experiences.
+I hope you will like it.
 
-## Recommended IDE Setup
+## Docker Setup with Docker Compose and hot-reload
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```sh
+docker-compose up
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+➜  Local:   http://localhost:8080/
+```
 
 ## Project Setup
 
