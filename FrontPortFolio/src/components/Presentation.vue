@@ -43,7 +43,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="flex justify-center h-screen snap-item px-20 pb-9">
+  <div class="container flex justify-center h-screen snap-item">
     <div class="my-auto w-1/2 flex justify-end">
       <nav class="w-fit">
         <ul>
@@ -58,7 +58,7 @@ onMounted(() => {
 
           <li>
             <a
-              href=""
+              href="#projet"
               class="flex justify-end items-center px-16 py-9 hover:px-24 text-3xl hover:text-secondary text-primary font-bold transform transition-all duration-1000"
             >
               PROJECTS

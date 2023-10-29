@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="min-h-screen snap-item bg-tertiary">
-    <div class="flex justify-center min-h-screen py-10 items-center">
+    <div class="container flex justify-center min-h-screen items-center">
       <div
         id="default-carousel"
         class="relative w-[90vw] h-[90vh] px-20 pb-14"

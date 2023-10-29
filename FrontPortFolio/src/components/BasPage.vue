@@ -1,8 +1,9 @@
 <script setup></script>
 
 <template>
-  <footer  id="basPage"
-    class="footer footer-center p-8 h-[30vh] snap-item text-primary-content"
+  <footer
+    id="basPage"
+    class="p-8 h-[30vh] snap-item text-primary-content flex justify-center items-center"
   >
     <div class="max-w-2xl mx-auto text-white">
       <div class="text-center">

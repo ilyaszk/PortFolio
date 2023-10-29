@@ -1,10 +1,8 @@
 <script setup></script>
 <template>
-  <div
-    class="min-h-screen snap-item flex items-center justify-center bg-tertiary"
-  >
+  <div id="projet" class="min-h-screen snap-item flex items-center justify-center">
     <div
-      class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5"
+      class="container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5"
     >
       <!--Card 1-->
       <a

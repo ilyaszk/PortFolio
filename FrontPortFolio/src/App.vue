@@ -7,7 +7,6 @@ import BasPage from "./components/BasPage.vue";
 import Contact from "./components/Contact.vue";
 import BonRencontre from "./components/BonRencontre.vue";
 import LoadingScreen from "./components/LoadingScreen.vue";
-import Experiences from "./components/Experiences.vue";
 
 const isLoadingScreen = ref(true);
 const isLoadingHome = ref(false);
@@ -34,7 +33,6 @@ const showEncre = () => {
       <NavBar @onfocus="showEncre"></NavBar>
       <Presentation></Presentation>
       <Competences></Competences>
-      <Experiences></Experiences>
       <BonRencontre></BonRencontre>
       <Contact></Contact>
       <BasPage></BasPage>
